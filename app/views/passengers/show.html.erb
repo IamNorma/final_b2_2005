@@ -4,3 +4,11 @@
 <% @passenger.flights.each do |flight| %>
   <%= link_to "#{flight.number}", "/flights/#{flight.id}" %><br>
 <% end %>
+
+<p>Add Flight For Passenger</p>
+<%= form_tag "/passengers/#{@passenger.id}", method: :post  do %>
+  <%= label_tag :flight_number %>
+  <%= text_field_tag :number %>
+
+  <%= submit_tag 'Submit' %>
+<% end %>
