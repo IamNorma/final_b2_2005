@@ -3,4 +3,8 @@
 <p>Flight Time: <%= @flight.time %></p>
 <p>Departure City: <%= @flight.departure_city %></p>
 <p>Arrival City: <%= @flight.arrival_city %></p>
-<p>Airline This Flight Belongs To: <%= @flight.airline.name %></p>
+<p>Airline This Flight Belongs To: <%= @flight.airline.name %></p><br>
+<p>Passengers On This Flight:</p>
+<% @flight.passengers.each do |passenger| %>
+  <%= passenger.name %><br>
+<% end %>
