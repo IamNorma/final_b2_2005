@@ -2,5 +2,5 @@
 
 <p>Flights For This Passenger:</p>
 <% @passenger.flights.each do |flight| %>
-  <%= flight.number %><br>
+  <%= link_to "#{flight.number}", "/flights/#{flight.id}" %><br>
 <% end %>
