@@ -1,0 +1,3 @@
+class FlightPassenger < ApplicationRecord
+
+end
