@@ -3,11 +3,11 @@ class Flight < ApplicationRecord
   has_many :flight_passengers
   has_many :passengers, through: :flight_passengers
 
-  def minors
+  def count_of_minors
     passengers.where("age < ?", 18).count
   end
 
-  def adults
+  def count_of_adults
     passengers.where("age >= ?", 18).count
   end
 end

@@ -24,7 +24,7 @@ RSpec.describe Flight, type: :model do
       FlightPassenger.create!(flight: flight1, passenger: junior)
       FlightPassenger.create!(flight: flight1, passenger: erick)
 
-      expect(flight1.minors).to eq(2)
+      expect(flight1.count_of_minors).to eq(2)
     end
 
     it '#adults' do
@@ -43,7 +43,7 @@ RSpec.describe Flight, type: :model do
       FlightPassenger.create!(flight: flight1, passenger: junior)
       FlightPassenger.create!(flight: flight1, passenger: erick)
 
-      expect(flight1.adults).to eq(3)
+      expect(flight1.count_of_adults).to eq(3)
     end
   end
 end

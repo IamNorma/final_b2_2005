@@ -63,7 +63,7 @@ RSpec.describe 'Flight Show Page' do
 
     visit "/flights/#{flight1.id}"
 
-    expect(page).to have_content("Minors On This Flight: #{flight1.minors}")
-    expect(page).to have_content("Adults On This Flight: #{flight1.adults}")
+    expect(page).to have_content("Minors On This Flight: #{flight1.count_of_minors}")
+    expect(page).to have_content("Adults On This Flight: #{flight1.count_of_adults}")
   end
 end
