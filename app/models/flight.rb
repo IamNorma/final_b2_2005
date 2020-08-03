@@ -6,4 +6,8 @@ class Flight < ApplicationRecord
   def minors
     passengers.where("age < ?", 18).count
   end
+
+  def adults
+    passengers.where("age >= ?", 18).count
+  end
 end
